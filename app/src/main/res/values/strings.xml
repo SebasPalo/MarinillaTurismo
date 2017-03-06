@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MarinillaTurismo</string>
+    <string name="titulo">Marinilla</string>
+    <string name="iniciarSes">Iniciar Sesion</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="username">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="repeatpassw">Repita Contraseña</string>
+    <string name="email">Correo</string>
+    <string name="miPerfil">Mi Perfil</string>
+    <string name="LogOut">Cerrar Sesion</string>
+    <string name="Llenecampos">Llene todos los campos</string>
+    <string name="Mainn">Principal</string>
+</resources>
