@@ -20,6 +20,7 @@ public class PerfilActivity extends AppCompatActivity {
 
     TextView tUsername,tEmail;
     Button bAvatar;
+    String username, correo;
     int flag;
 
     @Override
@@ -32,7 +33,9 @@ public class PerfilActivity extends AppCompatActivity {
         bAvatar=(Button) findViewById(R.id.bAvatar);
 
         Bundle extras= getIntent().getExtras();
-        tUsername.setText(extras.getString("username"));
+        username = extras.getString("username");
+        correo= extras.getString("correo");
+        tUsername.setText(username);
         tEmail.setText(extras.getString("correo"));
 
 bAvatar.setOnClickListener(new View.OnClickListener() {
@@ -64,6 +67,8 @@ bAvatar.setOnClickListener(new View.OnClickListener() {
                 break;
             case R.id.mPrincipal:
                 /*Intent intent2 = new Intent(PerfilActivity.this, MainActivity.class);
+                intent2.putExtra("username", username);
+                intent2.putExtra("correo", correo);
                 startActivity(intent2);*/
                 finish();
                 break;
