@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MarinillaTurismo</string>
+    <string name="titulo">Marinilla</string>
+    <string name="iniciarSes">Login</string>
+    <string name="registrarse">Sign Up</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="cancelar">Cancel</string>
+    <string name="repeatpassw">Retype Password</string>
+    <string name="email">Email</string>
+    <string name="miPerfil">My Profile</string>
+    <string name="LogOut">Log Out</string>
+    <string name="Llenecampos">Llene todos los campos</string>
+    <string name="Mainn">Principal</string>
+
+</resources>
