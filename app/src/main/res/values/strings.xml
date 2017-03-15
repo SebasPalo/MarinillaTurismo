@@ -44,26 +44,27 @@
     <string name="telbar1">1169812</string>
     <string name="telbar2">2269812</string>
     <string name="telbar3">3369812</string>
-    <string name="Dirbar1">Av 40 # 65 70</string>
-    <string name="Dirbar2">Av 40 # 65 70</string>
-    <string name="Dirbar3">Av 40 # 65 70</string>
+    <string name="Dirbar1">Av 41 # 65 70</string>
+    <string name="Dirbar2">Av 42 # 65 70</string>
+    <string name="Dirbar3">Av 43 # 65 70</string>
 
-    <string name="telrest1">4469812</string>
-    <string name="telrest2">5569812</string>
-    <string name="telrest3">6669812</string>
-    <string name="Dirrest1">Av 40 # 65 70</string>
-    <string name="Dirrest2">Av 40 # 65 70</string>
-    <string name="Dirrest3">Av 40 # 65 70</string>
+    <string name="telrest1">569 05 54</string>
+    <string name="telrest2">548 08 80</string>
+    <string name="telrest3">545 00 81</string>
+    <string name="Dirrest1">Calle 30 # 27-22</string>
+    <string name="Dirrest2">Calle 29 # 28-2a </string>
+    <string name="Dirrest3">Carrera 30 #30 -10 Parque principal	Marinilla Antioquia</string>
 
-    <string name="telhot1">7769812</string>
-    <string name="telhot2">8869812</string>
-    <string name="telhot3">9969812</string>
-    <string name="Dirhot1">Av 40 # 65 70</string>
-    <string name="Dirhot2">Av 40 # 65 70</string>
-    <string name="Dirhot3">Av 40 # 65 70</string>
+    <string name="telhot1">548 53 30</string>
+    <string name="telhot2">3666937</string>
+    <string name="telhot3">569 1357</string>
+    <string name="Dirhot1"> Carrera 30 # 28 58</string>
+    <string name="Dirhot2">Autopista Medellín- Bogotá Cl 22 Carrera 44-174 , Frente a la Ciudadela Artesanal
+Marinilla, Antioquia
+Colombia</string>
 
-
-
+    <string name="Dirhot3">Autopista Medellín-Bogotá, Km 39</string>
+    <string name="Offert">Grandes Descuento en Hoteles!!</string>
 
 
 </resources>

@@ -9,6 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
+    android:background="@drawable/fondoa"
     tools:context="com.sebaspalo.marinillaturismo.LoginActivity">
 
     <TextView
