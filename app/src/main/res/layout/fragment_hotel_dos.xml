@@ -9,15 +9,66 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/lightblue"></LinearLayout>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/hotel2" />
+            android:text="@string/Hotel2"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:textColor="@color/black"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/lightblue"></LinearLayout>
         <ImageView
-            android:layout_width="200dp"
+            android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:src="@drawable/hoteluno"/>
+            android:src="@drawable/hoteldos1"/>
+
     </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="28sp"
+                android:text="@string/Telefono"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="28sp"
+                android:text="@string/telhot2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="28sp"
+                android:text="@string/Direccion"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="28sp"
+                android:text="@string/Dirhot2"/>
+        </LinearLayout>
 
 
+    </LinearLayout>
 </FrameLayout>
+
+
+

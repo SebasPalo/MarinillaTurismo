@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.sebaspalo.marinillaturismo.HotelUnoFragment">
+    tools:context="com.sebaspalo.marinillaturismo.BarTresFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
@@ -20,7 +20,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/Hotel1"
+            android:text="@string/Bar3"
             android:textSize="30sp"
             android:gravity="center"
             android:textColor="@color/black"/>
@@ -31,39 +31,40 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:src="@drawable/hoteluno1"/>
+            android:src="@drawable/bartres"/>
     </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="28sp"
-                android:text="@string/Telefono"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="28sp"
-                android:text="@string/telhot1"/>
-        </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="28sp"
-                android:text="@string/Direccion"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="28sp"
-                android:text="@string/Dirhot1"/>
-        </LinearLayout>
+            android:textSize="28sp"
+            android:text="@string/Telefono"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="28sp"
+            android:text="@string/telbar3"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="28sp"
+            android:text="@string/Direccion"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="28sp"
+            android:text="@string/Dirbar3"/>
+    </LinearLayout>
 
 
     </LinearLayout>

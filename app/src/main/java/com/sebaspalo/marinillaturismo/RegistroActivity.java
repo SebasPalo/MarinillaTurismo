@@ -65,6 +65,7 @@ public class RegistroActivity extends AppCompatActivity {
                     intent.putExtra("username", eRUsuario.getText().toString());//informacion q voy a mandar
                     intent.putExtra("password", eRPassword.getText().toString());
                     intent.putExtra("correo", eCorreo.getText().toString());
+                    Toast.makeText(getApplicationContext(),getResources().getString(R.string.RegistroconExito),Toast.LENGTH_SHORT).show();
                     setResult(RESULT_OK, intent); //Como estoy respondiendo se quien me llamo
                     finish();//mata actividad
                 }

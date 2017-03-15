@@ -24,7 +24,7 @@ import android.content.Intent;
 import static android.R.attr.data;
 import static com.sebaspalo.marinillaturismo.R.id.toolbar;
 
-public class HotelActivity extends AppCompatActivity {
+public class LugaresActivity extends AppCompatActivity {
 
 
     String username, correo;
@@ -63,6 +63,28 @@ public class HotelActivity extends AppCompatActivity {
 
 
 
+        SectionsPagerAdapter mSectionsPagerAdapter;
+
+        /**
+         * The {@link ViewPager} that will host the section contents.
+         */
+        ViewPager mViewPager;
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle(titulo);
+        setSupportActionBar(toolbar);
+        // Create the adapter that will return a fragment for each of the three
+        // primary sections of the activity.
+        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+
+        // Set up the ViewPager with the sections adapter.
+        mViewPager = (ViewPager) findViewById(R.id.container);
+        mViewPager.setAdapter(mSectionsPagerAdapter);
+
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(mViewPager);
+
+
     }
 
 
@@ -79,43 +101,38 @@ public class HotelActivity extends AppCompatActivity {
         int id= item.getItemId();
         switch (id){
             case R.id.mPerfil:
-                Intent intent =new Intent(HotelActivity.this, PerfilActivity.class);
+                Intent intent =new Intent(LugaresActivity.this, PerfilActivity.class);
                 intent.putExtra("username", username);
                 intent.putExtra("correo", correo);
                 startActivity(intent);
+                finish();
                 break;
             case R.id.mBares: titulo="Bares";
-                SetVariables(titulo);
-
-                mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
-
-                // Set up the ViewPager with the sections adapter.
-                mViewPager = (ViewPager) findViewById(R.id.container);
-                mViewPager.setAdapter(mSectionsPagerAdapter);
-
-                TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
-                tabLayout.setupWithViewPager(mViewPager);
-
+                Intent intent1 = new Intent(LugaresActivity.this, LugaresActivity.class);
+                intent1.putExtra("titulo", titulo);
+                intent1.putExtra("username", username);
+                intent1.putExtra("correo", correo);
+                startActivity(intent1);
+                finish();
                 break;
             case R.id.mRestaurantes: titulo="Restaurantes";
-                SetVariables(titulo);
-
-
-
-
-                /*flag=2;
-                Intent intent2 = new Intent(HotelActivity.this, HotelActivity.class);
-                intent2.putExtra("flag", flag);
+                Intent intent2 = new Intent(LugaresActivity.this, LugaresActivity.class);
+                intent2.putExtra("titulo", titulo);
                 intent2.putExtra("username", username);
                 intent2.putExtra("correo", correo);
                 startActivity(intent2);
-                finish();*/
+                finish();
                 break;
             case R.id.mHoteles: titulo="Hoteles";
-                SetVariables(titulo);
+                Intent intent3 = new Intent(LugaresActivity.this, LugaresActivity.class);
+                intent3.putExtra("titulo", titulo);
+                intent3.putExtra("username", username);
+                intent3.putExtra("correo", correo);
+                startActivity(intent3);
+                finish();
                 break;
             case R.id.mLogOut:
-                Intent intent5 = new Intent(HotelActivity.this, LoginActivity.class);
+                Intent intent5 = new Intent(LugaresActivity.this, LoginActivity.class);
                 startActivity(intent5);
                 finish();
                 break;
@@ -169,18 +186,18 @@ public class HotelActivity extends AppCompatActivity {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
 
-                switch (position) {
-                    case 0:
-                        return tab1Fragm;
-                    case 1:
-                        return tab2Fragm;
+            switch (position) {
+                case 0:
+                    return tab1Fragm;
+                case 1:
+                    return tab2Fragm;
                         /*HotelUnoFragment tab2 = new HotelUnoFragment();
                         return tab2;*/
-                    case 2:
-                        return tab3Fragm;
-                    default:
-                        return null;
-                }
+                case 2:
+                    return tab3Fragm;
+                default:
+                    return null;
+            }
 
         }
 
@@ -212,35 +229,35 @@ public class HotelActivity extends AppCompatActivity {
             titulo= getResources().getString(R.string.TituloHoteles);
             tab1Fragm = new HotelUnoFragment();
             tab2Fragm = new HotelDosFragment();
-            tab3Fragm = new HotelUnoFragment();
+            tab3Fragm = new HotelTresFragment();
         }
         else if (titulo.equals("Bares")){
             NombreTab1=getResources().getString(R.string.Bar1);
             NombreTab2=getResources().getString(R.string.Bar2);
             NombreTab3=getResources().getString(R.string.Bar3);
             titulo= getResources().getString(R.string.Titulobares);
-            tab1Fragm = new HotelUnoFragment();
-            tab2Fragm = new HotelDosFragment();
-            tab3Fragm = new HotelUnoFragment();
+            tab1Fragm = new BarUnoFragment();
+            tab2Fragm = new BarDosFragment();
+            tab3Fragm = new BarTresFragment();
         }
-
-
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle(titulo);
-        setSupportActionBar(toolbar);
-        // Create the adapter that will return a fragment for each of the three
-        // primary sections of the activity.
-        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
-
-        // Set up the ViewPager with the sections adapter.
-        mViewPager = (ViewPager) findViewById(R.id.container);
-        mViewPager.setAdapter(mSectionsPagerAdapter);
-
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
-        tabLayout.setupWithViewPager(mViewPager);
-
+        else if (titulo.equals("Restaurantes")){
+            NombreTab1=getResources().getString(R.string.Restaurante1);
+            NombreTab2=getResources().getString(R.string.Restaurante2);
+            NombreTab3=getResources().getString(R.string.Restaurante3);
+            titulo= getResources().getString(R.string.TituloRestaurante);
+            tab1Fragm = new RestauranteUnoFragment();
+            tab2Fragm = new RestauranteDosFragment();
+            tab3Fragm = new RestauranteTresFragment();
+        }
 
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent intent =new Intent(LugaresActivity.this, MainActivity.class);
+        intent.putExtra("username", username);
+        intent.putExtra("correo", correo);
+        startActivity(intent);
+        finish();
+    }
 }

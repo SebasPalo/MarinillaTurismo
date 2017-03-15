@@ -27,6 +27,11 @@ public class LoginActivity extends AppCompatActivity {
         bIniciar= (Button) findViewById(R.id.bIniciar);
         tRegistrarse= (TextView) findViewById(R.id.tRegistrarse);
 
+        username="p";
+        password="p";
+        correo="palosebas@gmail.com";
+
+
         /*Bundle extras =getIntent().getExtras();//bundle es como un objeto-cajon para meter informacion
 
         extras.getString("username");*/
@@ -49,7 +54,8 @@ public class LoginActivity extends AppCompatActivity {
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);//voy hacia el main activity
                     intent.putExtra("username", username);//envio esto
                     intent.putExtra("correo", correo);
-                    startActivity(intent);//EmpiezoActividad
+                    startActivity(intent);
+                    finish();//EmpiezoActividad
                 }
                 else Toast.makeText(getApplicationContext(),"Usuario o Contraseña Incorrecta",Toast.LENGTH_SHORT).show();
             }
@@ -72,5 +78,11 @@ public class LoginActivity extends AppCompatActivity {
         }
 
     }
-
+/*
+    @Override
+    public void onBackPressed() {
+        finish();
+        System.exit(0);
+        super.onBackPressed();
+    }*/
 }

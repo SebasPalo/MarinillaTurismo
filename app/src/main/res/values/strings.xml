@@ -14,10 +14,56 @@
     <string name="Mainn">Principal</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hotel1">Hotel 1</string>
     <string name="hotel2">Hotel 2</string>
     <string name="title_activity_hotel">HotelActivity</string>
-    <string name="action_settings">Settings</string>
-    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="Hoteles">Hoteles</string>
+    <string name="Hotel1">KASAKIR</string>
+    <string name="Hotel2">MEGACIELO</string>
+    <string name="Hotel3">VILLA COLONIA</string>
+    <string name="Bares">Bares</string>
+    <string name="Bar1">Toro Ebrio</string>
+    <string name="Bar3">Weppa!!</string>
+    <string name="Bar2">Parapapáz</string>
+    <string name="Restaurantes">Restaurantes</string>
+    <string name="Restaurante1">Restaurante La Torre</string>
+    <string name="Restaurante2">La Parrila de Maos</string>
+    <string name="Restaurante3">La Esparta</string>
+
+    <string name="TituloHoteles">Hoteles</string>
+
+    <string name="Titulobares">Bares</string>
+    <string name="title_activity_lugares">LugaresActivity</string>
+
+    <string name="TituloRestaurante">Restaurantes</string>
+    <string name="RegistroconExito">Registro con Exito</string>
+
+    <string name="Telefono">Telefono: </string>
+    <string name="Direccion">Direccion :</string>
+
+    <string name="telbar1">1169812</string>
+    <string name="telbar2">2269812</string>
+    <string name="telbar3">3369812</string>
+    <string name="Dirbar1">Av 40 # 65 70</string>
+    <string name="Dirbar2">Av 40 # 65 70</string>
+    <string name="Dirbar3">Av 40 # 65 70</string>
+
+    <string name="telrest1">4469812</string>
+    <string name="telrest2">5569812</string>
+    <string name="telrest3">6669812</string>
+    <string name="Dirrest1">Av 40 # 65 70</string>
+    <string name="Dirrest2">Av 40 # 65 70</string>
+    <string name="Dirrest3">Av 40 # 65 70</string>
+
+    <string name="telhot1">7769812</string>
+    <string name="telhot2">8869812</string>
+    <string name="telhot3">9969812</string>
+    <string name="Dirhot1">Av 40 # 65 70</string>
+    <string name="Dirhot2">Av 40 # 65 70</string>
+    <string name="Dirhot3">Av 40 # 65 70</string>
+
+
+
+
+
 </resources>

@@ -20,7 +20,7 @@ public class PerfilActivity extends AppCompatActivity {
 
     TextView tUsername,tEmail;
     Button bAvatar;
-    String username, correo;
+    String username, correo,titulo;
     int flag;
 
     @Override
@@ -65,11 +65,35 @@ bAvatar.setOnClickListener(new View.OnClickListener() {
                 startActivity(intent);
                 finish();
                 break;
-            case R.id.mPrincipal:
-                /*Intent intent2 = new Intent(PerfilActivity.this, MainActivity.class);
+            case R.id.mBares:titulo="Bares";
+                Intent intent2 = new Intent(PerfilActivity.this, LugaresActivity.class);
+                intent2.putExtra("titulo", titulo);
                 intent2.putExtra("username", username);
                 intent2.putExtra("correo", correo);
-                startActivity(intent2);*/
+                startActivity(intent2);
+                finish();
+                break;
+            case R.id.mRestaurantes:titulo="Restaurantes";
+                Intent intent3 = new Intent(PerfilActivity.this, LugaresActivity.class);
+                intent3.putExtra("titulo", titulo);
+                intent3.putExtra("username", username);
+                intent3.putExtra("correo", correo);
+                startActivity(intent3);
+                finish();
+                break;
+            case R.id.mHoteles:titulo="Hoteles";
+                Intent intent4 = new Intent(PerfilActivity.this, LugaresActivity.class);
+                intent4.putExtra("titulo", titulo);
+                intent4.putExtra("username", username);
+                intent4.putExtra("correo", correo);
+                startActivity(intent4);
+                finish();
+                break;
+            case R.id.mPrincipal:
+                Intent intent1 = new Intent(PerfilActivity.this, MainActivity.class);
+                intent1.putExtra("username", username);
+                intent1.putExtra("correo", correo);
+                startActivity(intent1);
                 finish();
                 break;
 
@@ -103,4 +127,13 @@ bAvatar.setOnClickListener(new View.OnClickListener() {
         }
         return true;
     }*/
+
+    @Override
+    public void onBackPressed() {
+        Intent intent =new Intent(PerfilActivity.this, MainActivity.class);
+        intent.putExtra("username", username);
+        intent.putExtra("correo", correo);
+        startActivity(intent);
+        finish();
+    }
 }
