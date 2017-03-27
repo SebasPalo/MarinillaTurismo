@@ -65,6 +65,16 @@ Colombia</string>
 
     <string name="Dirhot3">Autopista Medellín-Bogotá, Km 39</string>
     <string name="Offert">Grandes Descuento en Hoteles!!</string>
+    <string name="title_activity_hotel_d">Lugares!</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main_d">Principal</string>
+    <string name="Personal">Personal</string>
+    <string name="title_activity_perfil_d">Mi perfil</string>
+    <string name="descrip">Maravilloso lugar</string>
 
 
 </resources>

@@ -24,10 +24,22 @@
         <activity
             android:name=".HotelActivity"
             android:label="@string/title_activity_hotel"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".LugaresActivity"
             android:label="@string/title_activity_lugares"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".HotelDActivity"
+            android:label="@string/title_activity_hotel_d"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainDActivity"
+            android:label="@string/title_activity_main_d"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PerfilDActivity"
+            android:label="@string/title_activity_perfil_d"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

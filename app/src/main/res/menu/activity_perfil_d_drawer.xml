@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/md3Principal"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/Mainn" />
+        <item
+            android:id="@+id/md3Hoteles"
+            android:icon="@drawable/ic_local_hotel_black_24dp"
+            android:title="@string/Hoteles" />
+        <item
+            android:id="@+id/md3Restaurantes"
+            android:icon="@drawable/ic_restaurant_black_24dp"
+            android:title="@string/Restaurantes" />
+        <item
+            android:id="@+id/md3Bares"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/Bares" />
+    </group>
+
+    <item android:title="@string/Personal">
+        <menu>
+            <item
+                android:id="@+id/md3Logout"
+                android:icon="@drawable/ic_exit_to_app_black_24dp"
+                android:title="@string/LogOut" />
+        </menu>
+    </item>
+
+</menu>

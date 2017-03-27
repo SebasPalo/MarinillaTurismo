@@ -25,13 +25,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
+/*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {//Creo el menu
         getMenuInflater().inflate(R.menu.menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
-
+/*
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id= item.getItemId();
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                 finish();
                 break;
             case R.id.mBares:titulo="Bares";
-                Intent intent2 = new Intent(MainActivity.this, LugaresActivity.class);
+                Intent intent2 = new Intent(MainActivity.this, HotelDActivity.class);
                 intent2.putExtra("titulo", titulo);
                 intent2.putExtra("username", username);
                 intent2.putExtra("correo", correo);
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 finish();
                 break;
             case R.id.mRestaurantes:titulo="Restaurantes";
-                Intent intent3 = new Intent(MainActivity.this, LugaresActivity.class);
+                Intent intent3 = new Intent(MainActivity.this, HotelDActivity.class);
                 intent3.putExtra("titulo", titulo);
                 intent3.putExtra("username", username);
                 intent3.putExtra("correo", correo);
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                 finish();
                 break;
             case R.id.mHoteles:titulo="Hoteles";
-                Intent intent4 = new Intent(MainActivity.this, LugaresActivity.class);
+                Intent intent4 = new Intent(MainActivity.this, HotelDActivity.class);
                 intent4.putExtra("titulo", titulo);
                 intent4.putExtra("username", username);
                 intent4.putExtra("correo", correo);
@@ -82,13 +82,14 @@ public class MainActivity extends AppCompatActivity {
         return true;
         //return super.onOptionsItemSelected(item);
     }
+*/
 
-   @Override
+ /*  @Override
     public void onBackPressed() {
         Intent intent =new Intent(MainActivity.this, LoginActivity.class);
         startActivity(intent);
         finish();
-    }
+    }*/
 }
 
 

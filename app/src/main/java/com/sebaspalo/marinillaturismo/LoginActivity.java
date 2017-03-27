@@ -51,7 +51,7 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Llene los Campos",Toast.LENGTH_SHORT).show();
                 }
                 else if(eUsuario.getText().toString().equals(username) && ePassword.getText().toString().equals(password)){
-                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);//voy hacia el main activity
+                    Intent intent = new Intent(LoginActivity.this, MainDActivity.class);//voy hacia el main activity
                     intent.putExtra("username", username);//envio esto
                     intent.putExtra("correo", correo);
                     startActivity(intent);
