@@ -1,6 +1,7 @@
 package com.sebaspalo.marinillaturismo;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -30,6 +31,9 @@ public class PerfilDActivity extends AppCompatActivity
     String username, correo,titulo;
     int flag;
 
+    SharedPreferences prefs;//creopreferenciascompartidas
+    SharedPreferences.Editor editor;//el editor para lo anterior
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +45,8 @@ public class PerfilDActivity extends AppCompatActivity
         tEmail=(TextView) findViewById(R.id.tEmail);
         bAvatar=(Button) findViewById(R.id.bAvatar);
 
+        prefs =getSharedPreferences("MisPreferencias",MODE_PRIVATE);//traigolas preferencias
+        editor = prefs.edit();//cargo el editor
 
         Bundle extras= getIntent().getExtras();
         username = extras.getString("username");
@@ -152,6 +158,8 @@ public class PerfilDActivity extends AppCompatActivity
             finish();
 
         }  else if (id == R.id.md3Logout) {
+            editor.putInt("login",-1);
+            editor.commit();
             Intent intent5 = new Intent(PerfilDActivity.this, LoginActivity.class);
             startActivity(intent5);
             finish();

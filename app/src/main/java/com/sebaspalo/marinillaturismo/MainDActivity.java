@@ -2,6 +2,7 @@ package com.sebaspalo.marinillaturismo;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -31,6 +32,9 @@ public class MainDActivity extends AppCompatActivity
     String username, correo, titulo;
     TextView navUsername,navcorreo;
 
+    SharedPreferences prefs;//creopreferenciascompartidas
+    SharedPreferences.Editor editor;//el editor para lo anterior
+
     private Lista_Entrada[] datos = new Lista_Entrada[] {
             new Lista_Entrada(R.drawable.hoteluno2, "Hotel Kasakir", "Mejores precios", "Carrera 30 # 28 58"),
             new Lista_Entrada(R.drawable.hoteldos2, "Hotel Megacielo", "Gran Comfort", "Cl 22 Carrera 44-174"),
@@ -46,14 +50,14 @@ public class MainDActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        prefs =getSharedPreferences("MisPreferencias",MODE_PRIVATE);//traigolas preferencias
+        editor = prefs.edit();//cargo el editor
+
         Bundle extras =getIntent().getExtras();
         username = extras.getString("username");
         correo= extras.getString("correo");
 
-        /*TextView textNombre=(TextView)findViewById(R.id.text2Nombre);
-        textNombre.setText(username);
-        TextView textCorreo=(TextView)findViewById(R.id.text2Correo);
-        textCorreo.setText(correo);*/
+
 
         list = (ListView) findViewById(R.id.list);
         Adapter adapter = new Adapter(this, datos);
@@ -137,9 +141,12 @@ public class MainDActivity extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
+            super.onBackPressed();
+            /*editor.putInt("login",-1);
+            editor.commit();
             Intent intent =new Intent(MainDActivity.this, LoginActivity.class);
             startActivity(intent);
-            finish();
+            finish();*/
         }
     }
 
@@ -204,6 +211,8 @@ public class MainDActivity extends AppCompatActivity
             finish();
 
         } else if (id == R.id.md2Logout) {
+             editor.putInt("login",-1);
+             editor.commit();
             Intent intent5 = new Intent(MainDActivity.this, LoginActivity.class);
             startActivity(intent5);
             finish();

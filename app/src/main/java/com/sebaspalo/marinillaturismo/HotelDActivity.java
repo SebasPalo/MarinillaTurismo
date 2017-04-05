@@ -1,6 +1,7 @@
 package com.sebaspalo.marinillaturismo;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -32,6 +33,9 @@ public class HotelDActivity extends AppCompatActivity
     Fragment tab2Fragm;
     Fragment tab3Fragm;
 
+    SharedPreferences prefs;//creopreferenciascompartidas
+    SharedPreferences.Editor editor;//el editor para lo anterior
+
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
 
@@ -45,6 +49,8 @@ public class HotelDActivity extends AppCompatActivity
         username = extras.getString("username");
         correo= extras.getString("correo");
 
+        prefs =getSharedPreferences("MisPreferencias",MODE_PRIVATE);//traigolas preferencias
+        editor = prefs.edit();//cargo el editor
 
         SetVariables(titulo);
 
@@ -159,6 +165,8 @@ public class HotelDActivity extends AppCompatActivity
             finish();
 
         } else if (id == R.id.mdLogout) {
+            editor.putInt("login",-1);
+            editor.commit();
             Intent intent5 = new Intent(HotelDActivity.this, LoginActivity.class);
             startActivity(intent5);
             finish();
